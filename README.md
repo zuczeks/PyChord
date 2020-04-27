@@ -1,4 +1,4 @@
-# PytChord
+# PyChord
 ## Participants 
  - Izabela Bąk
  - Wiktor Jasiński
