@@ -16,15 +16,15 @@ The main issue of the project is to harmonize and rhythmize given melodic line, 
 - web application 
 
 
-##PyChord Project Description
+## PyChord Project Description
 
-##Program User Interface
+## Program User Interface
 
 piano keyboard to enter the melody 
 the staff with bars and notes displayed
 additional buttons: key, number of bars and time measure choice, instrument choice (input is always the piano, but the output may be like guitar, flute, etc.), rhythm generation
 
-##Functions to implement
+## Functions to implement
 
 -  playing tones chosen from the screen piano keyboard
 -  displaying notes on the staff
@@ -40,7 +40,7 @@ additional buttons: key, number of bars and time measure choice, instrument choi
 -  possibility to choose instrument played
 -  saving generated piece (midi file or else)
 
-##Working on project
+## Working on project
 
 Sprint 1: (4.05 - 10.05)
 GUI basics
@@ -67,7 +67,7 @@ final look
 optional tests
 
 
-##Basic harmonization algorithm
+## Basic harmonization algorithm
 We have the key (chosen by user) and a bunch of notes (all the same measure) within this key (for example d minor). Another notes of the piano keyboard (which are not in given key) are disabled.
 Next step is to recognize the set of basic chords in this key (d minor, g minor, A major, Bb major)
 Then to group our notes into maximum groups that each note is contained in one chord from given above, and apply additional rules:
@@ -77,7 +77,7 @@ We optionally end the melody with a keynote to make a nice ending.
 
 
 
-##Some further improvements
+## Some further improvements
 Determining the key of the melody (which isn’t fixed), considering given notes, key characters and maybe the end note.
 Generating the rhythm in order to have the notes in varying measures 
 
