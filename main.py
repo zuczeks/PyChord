@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QPushButton, QMainWindow, QApplication
+from PyQt5.QtWidgets import QPushButton, QMainWindow, QApplication, QComboBox
 import sys
 from music21 import *
 import subprocess
@@ -66,6 +66,19 @@ def add_note(my_note):
     tmpStream.pop(1)
 
 
+def change_instrument(choice):
+    if choice == 0:
+        stream1.insert(instrument.Piano())
+    elif choice == 1:
+        stream1.insert(instrument.AcousticGuitar())
+    elif choice == 2:
+        stream1.insert(instrument.Violin())
+    elif choice == 3:
+        stream1.insert(instrument.Flute())
+    elif choice == 4:
+        stream1.insert(instrument.Mandolin())
+
+
 def my_window():
     app = QApplication([])
     app.setStyle('Fusion')
@@ -84,6 +97,11 @@ def my_window():
     save_button = QPushButton("Save", window)
     save_button.clicked.connect(save)
     save_button.move(1100, 400)
+
+    cb = QComboBox(window)
+    cb.move(1100, 250)
+    cb.addItems(['Piano(default)', 'Guitar', 'Violin', 'Flute', 'Mandolin'])
+    cb.currentIndexChanged.connect(change_instrument)
 
     window.show()
     sys.exit(app.exec_())
