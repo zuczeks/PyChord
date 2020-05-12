@@ -43,27 +43,27 @@ The main issue of the project is to harmonize and rhythmize given melodic line, 
 
 Sprint 1: (4.05 - 10.05)
 GUI basics
-playing on the piano
+- playing on the piano
 
 Sprint 2: (11.05 - 17.05)
-staff visualisation with notes
-notes letter names
+- staff visualisation with notes
+- notes letter names
 
 Sprint 3: (18.05 - 24.05)
-harmonizing the simple melody in fixed key
-displaying chords
+- harmonizing the simple melody in fixed key
+- displaying chords
 
 Sprint 4: (25.04 - 31.05)
-instrument choice and output files
-determining the key
+- instrument choice and output files
+- determining the key
 
 Sprint 5: (1.06 - 7.06)
-improvements of the piece (rhythm generation, more advanced harmonization)
+- improvements of the piece (rhythm generation, more advanced harmonization)
 
 Sprint 6: (8.06 - 14.06)
-additionals 
-final look
-optional tests
+- additionals 
+- final look
+- optional tests
 
 
 ## Basic harmonization algorithm
