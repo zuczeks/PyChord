@@ -11,7 +11,7 @@ from Keyboard import Keyboard
 class MyWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-
+        
         self.stream1 = stream.Stream()
         self.stream1.insert(instrument.Piano())
         self.tmpStream = stream.Stream()
