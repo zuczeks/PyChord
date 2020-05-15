@@ -7,6 +7,7 @@ import os
 from datetime import date
 from Keyboard import Keyboard
 
+
 class MyWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -16,8 +17,8 @@ class MyWindow(QMainWindow):
         self.tmpStream = stream.Stream()
         self.tmpStream.insert(instrument.Piano())
         self.lpc = lily.translate.LilypondConverter()
-        lpMusicList = lily.lilyObjects.LyMusicList()
-        self.lpc.context = lpMusicList
+        lp_music_list = lily.lilyObjects.LyMusicList()
+        self.lpc.context = lp_music_list
 
         self.resize(1300, 700)
         self.setWindowTitle("PyChord")
@@ -39,11 +40,9 @@ class MyWindow(QMainWindow):
         cb.addItems(['Piano(default)', 'Guitar', 'Violin', 'Flute', 'Mandolin'])
         cb.currentIndexChanged.connect(self.change_instrument)
 
-
     def play_notes(self):
         sp = midi.realtime.StreamPlayer(self.stream1)
         sp.play()
-
 
     def show_notes(self):
         self.lpc.appendObjectsToContextFromStream(self.stream1)
@@ -66,13 +65,13 @@ class MyWindow(QMainWindow):
 
             subprocess.Popen(['powershell', '.\\try2.pdf'])
 
-
     def save(self):
         if not os.path.exists('music'):
             os.makedirs('music')
         today = date.today()
         flag = True
         count = 1
+        path = ''
 
         while flag is True:
             path = os.path.join('music', '{}.{}.mid'.format(str(count), str(today)))
@@ -81,14 +80,12 @@ class MyWindow(QMainWindow):
 
         self.stream1.write('midi', fp=path)
 
-
     def add_note(self, my_note):
         self.stream1.append(note.Note(my_note))
         self.tmpStream.append(note.Note(my_note))
         sp = midi.realtime.StreamPlayer(self.tmpStream)
         sp.play()
         self.tmpStream.pop(1)
-
 
     def change_instrument(self, choice):
         if choice == 0:
