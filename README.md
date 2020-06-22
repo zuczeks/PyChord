@@ -1,6 +1,7 @@
+
 # PyChord
 ## Participants 
- - Izabela Bąk
+ - Izabela Bąk - teamleader
  - Wiktor Jasiński
  - Adrianna Pytel
  - Szymon Telega
@@ -14,8 +15,18 @@ The main issue of the project is to harmonize and rhythmize given melodic line, 
 - output in the form of audible music piece and guitar/piano chords
 - optionally using machine-learning to teach the program to match chords correctly
 
+## Instalation:
+To run PyChord you need to follow this steps:
+- regardless of the OS you're using, install Lilipond: http://lilypond.org/download.html. To run the code on Windows it is necessary also to add the LilyPond\usr\bin folder to path.
+- on linux you'll also need some synthesizer that can play MIDI files (i.e. Timidity)
+- install packages from requirements.txt - run 'pip install -r requirements.txt'
+- run application with 'python PyChord.py'
+
 
 ## PyChord Project Description
+
+### Program tutorial in polish
+https://drive.google.com/file/d/1zzrpaT-NJmUdgPgN3l2LFZcjD1JjpV2r/view?usp=sharing
 
 ## Program User Interface
 
@@ -67,18 +78,14 @@ Sprint 6: (8.06 - 14.06)
 
 
 ## Basic harmonization algorithm
-1. We have the key (chosen by user) and a bunch of notes (all the same measure) within this key (for example d minor). Another notes of the piano keyboard (which are not in given key) are disabled.
-2. Next step is to recognize the set of basic chords in this key (d minor, g minor, A major, Bb major)
-3. Then to group our notes into maximum groups that each note is contained in one chord from given above, and apply additional rules:
-3a. changing the chord on the “weak” part of the bar (meaning the 2nd and 4th measure in the 4/4 bar and 2nd and 3rd measure in the 3/4 bar) - the same chord may not last to the next bar
-3b. when maximum groups imply the chord change, we consider smaller groups and so on
-4. We optionally end the melody with a keynote to make a nice ending.
+https://docs.google.com/document/d/1O2371Rh-Jzn-JSPzkmYcQ7uEdMk8movFK-UW56fM7iY/edit?usp=sharing
 
 
 
 ## Some further improvements
 - Determining the key of the melody (which isn’t fixed), considering given notes, key characters and maybe the end note.
 - Generating the rhythm in order to have the notes in varying measures 
+
 
 
 
