@@ -125,8 +125,8 @@ class MyWindow(QMainWindow):
             with open('notes.ly', 'w+') as f:
                 f.write('\\version "2.20.0"\n')
                 if self.actual_key is None:
-                    f.write('\\version "2.20.0"\n')
                     f.write("{\n")
+                    f.write('\\key c \\major \n')
                     f.write(str(self.lpc.context))
                     f.write("}\n")
                 else:
